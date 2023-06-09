@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="LayoutGPT generates plausible image layouts and indoor scene layouts with style sheets language.">
+  <meta name="keywords" content="text-to-image generation, Large Language Models, scene synthesis">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LayoutGPT</title>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">LayoutGPT: Compositional Visual Planning and Generation with Large Language Models</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://weixi-feng.github.io/">Weixi Feng</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href="https://wanrong-zhu.com/">Wanrong Zhu</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href="https://tsujuifu.github.io/">Tsu-jui Fu</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://varunjampani.github.io/">Varun Jampani</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.arjunakula.com/">Arjun Akula</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=kDzxOzUAAAAJ&">Xuehai He</a><sup>3</sup>,
+            </span>
+            <br>
+            <span class="author-block">
+              <a href="https://sites.google.com/site/sugatobasu/">Sugato Basu</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://eric-xw.github.io/">Xin Eric Wang</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://sites.cs.ucsb.edu/~william/">William Yang Wang</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>UC Santa Barbara,</span>
+            <span class="author-block"><sup>2</sup>Google,</span>
+            <span class="author-block"><sup>2</sup>UC Santa Cruz</span>
+            <br>
+            <span class="author-block"><sup>*</sup>Equal Contribution</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2305.15393"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/weixi-feng/LayoutGPT"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        LayoutGPT for image layout generation based on text inputs. 
+      </h2>
+      <video id="teaser" autoplay muted loop playsinline height="200%">
+        <source src="./static/videos/merged_images.mp4"
+                type="video/mp4">
+      </video>
+    </div>
+
+    <div class="hero-body">
+      <h2 class="subtitle has-text-centered">
+        LayoutGPT for 3D indoor scene synthesis.
+      </h2>
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/merged_scenes.mp4"
+                type="video/mp4">
+      </video>
+      
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Attaining a high degree of user controllability in visual generation often requires intricate, fine-grained inputs like layouts. 
+            However, such inputs impose a substantial burden on users when compared to simple text inputs. 
+            To address the issue, we study how Large Language Models (LLMs) can serve as visual planners by generating layouts from text conditions, and thus collaborate with visual generative models. 
+          </p>
+          <p>
+            We propose LayoutGPT, a method to compose in-context visual demonstrations in style sheet language to enhance the visual planning skills of LLMs. 
+            LayoutGPT can generate plausible layouts in multiple domains, ranging from 2D images to 3D indoor scenes. 
+            LayoutGPT also shows superior performance in converting challenging language concepts like numerical and spatial relations to layout arrangements for faithful text-to-image generation. 
+          </p>
+          <p>
+            When combined with a downstream image generation model, LayoutGPT outperforms text-to-image models/systems by 20-40% and achieves comparable performance as human users
+            in designing visual layouts for numerical and spatial correctness. 
+            Lastly, LayoutGPT achieves comparable performance to supervised methods in 3D indoor scene synthesis, demonstrating its effectiveness and potential in multiple visual domains.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- 2D. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">2D image layouts</h2>
+
+        <!-- . -->
+        <h3 class="title is-4">Faithfulness in Numerical and Spatial Concepts</h3>
+        <div class="content has-text-justified">
+          <p>
+           LayoutGPT can apply the numerical reasoning skills of LLMs into layout generation and learn spatial concepts through in-context demonstrations.
+          </p>
+          <img src="./static/images/2d_visualize.jpg" alt="Teaser" width="100%">
+        </div>
+        <br/>
+        <!--/ . -->
+        
+        <h3 class="title is-4">Flexible Application Scenarios</h3>
+        <div class="content has-text-justified">
+          <p>
+            Two natural advantages of using LLMs for image layout generation: 
+            <br> (1) Attribute Binding: assign correct attributes to the bounding boxes 
+            <br> (2) Text-based inpainting: imagine and expand the underspecified description of certain objects.
+          </p>
+          <img src="./static/images/2d_application.jpg" alt="Teaser" width="100%">
+        </div>
+
+      </div>
+    </div>
+    <!--/ 2D. -->
+
+
+    <!-- 3D. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">3D Scene Synthesis</h2>
+
+        <!-- . -->
+        <h3 class="title is-4"></h3>
+        <div class="content has-text-justified">
+          <p>
+            LayoutGPT shows comparable performance as supervised methods in indoor scene generation conditioned on room type and floor plan size.
+          </p>
+          <img src="./static/images/3d_qualitative.png" alt="Teaser" width="100%">
+        </div>
+        <br/>
+        <!--/ . -->
+        
+        <h3 class="title is-4">Application: Scene Completion</h3>
+        <div class="content has-text-justified">
+          <p>
+            The autoregressive manner of LLMs enables LayoutGPT to complete a partial scene.
+          </p>
+          <img src="./static/images/3d_completion.png" alt="Teaser" width="100%">
+        </div>
+
+      </div>
+    </div>
+    <!--/ 3D. -->
+
+
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Please check out previous work like <a href="https://gligen.github.io/">GLIGEN</a>, <a href="https://github.com/nv-tlabs/ATISS">ATISS</a>, and <a href="https://github.com/microsoft/GLIP">GLIP</a> upon which we build our LayoutGPT framework and code repository. 
+            There's also a lot of relevant work that was introduced around the same time as ours.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{feng2023layoutgpt,
+  title={LayoutGPT: Compositional Visual Planning and Generation with Large Language Models},
+  author={Feng, Weixi and Zhu, Wanrong and Fu, Tsu-jui and Jampani, Varun and Akula, Arjun and He, Xuehai and Basu, Sugato and Wang, Xin Eric and Wang, William Yang},
+  journal={arXiv preprint arXiv:2305.15393},
+  year={2023}
+}
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/layoutgpt_arxiv.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/VegB" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            The webpage is built based on <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
