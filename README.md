@@ -1,10 +1,8 @@
-# LayoutGPT
+# LayoutLLM-T2I
 
 This is the repository that contains source code for the [LayoutLLM-T2I project page](https://layoutllm-t2i.github.io/).
 
-The webpage code was borrowed from [Nerfies](https://github.com/nerfies/nerfies.github.io).
-
-If you find LayoutGPT useful for your work please cite:
+If you use this LayoutLLM-T2I in your work, please kindly cite:
 ```
 @inproceedings{qu2023layoutllm,
   title={LayoutLLM-T2I: Eliciting Layout Guidance from LLM for Text-to-Image Generation},
