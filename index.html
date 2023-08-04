@@ -91,7 +91,7 @@
               </span> -->
 
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2305.15393"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -133,15 +133,15 @@
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="subtitle has-text-centered">
-        LayoutLLM for image layout generation based on text inputs. 
-      </h2>
-      <video id="teaser" autoplay muted loop playsinline height="200%">
-        <source src="./static/videos/merged_images.mp4"
-                type="video/mp4">
-      </video>
-    </div>
+<!--    <div class="hero-body">-->
+<!--      <h2 class="subtitle has-text-centered">-->
+<!--        LayoutLLM for image layout generation based on text inputs. -->
+<!--      </h2>-->
+<!--      <video id="teaser" autoplay muted loop playsinline height="200%">-->
+<!--        <source src="./static/videos/merged_images.mp4"-->
+<!--                type="video/mp4">-->
+<!--      </video>-->
+<!--    </div>-->
 
 <!--     <div class="hero-body">
       <h2 class="subtitle has-text-centered">
@@ -167,20 +167,19 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Attaining a high degree of user controllability in visual generation often requires intricate, fine-grained inputs like layouts. 
-            However, such inputs impose a substantial burden on users when compared to simple text inputs. 
-            To address the issue, we study how Large Language Models (LLMs) can serve as visual planners by generating layouts from text conditions, and thus collaborate with visual generative models. 
+            In the text-to-image generation field, recent remarkable progress in Stable Diffusion makes it possible to generate rich kinds of novel photorealistic images.
+            However, current models still face misalignment issues (<em>e.g.</em>, problematic spatial relation understanding and numeration failure) in complex natural scenes, which impedes the high-faithfulness text-to-image generation.
+            Although recent efforts have been made to improve controllability by giving fine-grained guidance (<em>e.g.</em>, sketch and scribbles), this issue has not been fundamentally tackled since users have to provide such guidance information manually.
+
           </p>
           <p>
-            We propose LayoutGPT, a method to compose in-context visual demonstrations in style sheet language to enhance the visual planning skills of LLMs. 
-            LayoutGPT can generate plausible layouts in multiple domains, ranging from 2D images to 3D indoor scenes. 
-            LayoutGPT also shows superior performance in converting challenging language concepts like numerical and spatial relations to layout arrangements for faithful text-to-image generation. 
+            In this work, we strive to synthesize high-fidelity images that are semantically aligned with a given textual prompt without any guidance.
+            Toward this end, we propose a coarse-to-fine paradigm to achieve layout planning and image generation.
+            Concretely, we first generate the coarse-grained layout conditioned on a given textual prompt via in-context learning based on Large Language Models.
+            Afterward, we propose a fine-grained object-interaction diffusion method to synthesize high-faithfulness images conditioned on the prompt and the automatically generated layout.
+            Extensive experiments demonstrate that our proposed method outperforms the state-of-the-art models in terms of cross-modal text-layout alignment and high-faithfulness image generation.
           </p>
-          <p>
-            When combined with a downstream image generation model, LayoutGPT outperforms text-to-image models/systems by 20-40% and achieves comparable performance as human users
-            in designing visual layouts for numerical and spatial correctness. 
-            Lastly, LayoutGPT achieves comparable performance to supervised methods in 3D indoor scene synthesis, demonstrating its effectiveness and potential in multiple visual domains.
-          </p>
+
         </div>
       </div>
     </div>
@@ -204,74 +203,93 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <!-- 2D. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">image layouts</h2>
+        <h2 class="title is-3">Motivation</h2>
 
-        <!-- . -->
-        <h3 class="title is-4">Faithfulness in Numerical and Spatial Concepts</h3>
         <div class="content has-text-justified">
           <p>
-           LayoutLLM can apply the numerical reasoning skills of LLMs into layout generation and learn spatial concepts through in-context demonstrations.
+            Despite the satisfactory performance achieved by recent SD-based models, synthesizing high-faithful images in complex scenes is still challenging, such as <font color="#4C76C6"><em>problematic spatial relation understanding</em></font> and <font color="#4C76C6"><em>numeration failure</em></font>, as shown in the following figure.
+           However, to achieve high-faithfulness image synthesis, the existing models suffer from the following challenges:
+
+            <ol>
+              <li>
+                <b>Layout Planning</b> requires abstract spatial imagination and analysis capabilities. The limited annotated layout data and intrinsic inductive bias make it difficult for existing diffusion methods to accurately and aesthetically generate layouts. Although notable efforts have been dedicated to synthesizing complex scenes by manually providing guidance information, these strategies suffer from weak flexibility and low efficiency since they heavily rely on extra labor-intensive guidance.
+              </li>
+              <li>
+                <b>Relation Modeling</b>, <em>e.g.</em>, the high-level spatial and semantic relations, plays a pivotal role in understanding, imagining, and depicting complex scenes for T2I models, but it is still under-explored owing to the complex and ever-changing environments in real life.
+              </li>
+            </ol>
+
+
           </p>
-          <img src="./static/images/2d_visualize.jpg" alt="Teaser" width="100%">
+          <img class="columns is-centered has-text-centered" src="./static/images/intro.jpg" alt="Teaser" width="60%" style="margin:0 auto">
         </div>
         <br/>
-        <!--/ . -->
-        
-        <h3 class="title is-4">Flexible Application Scenarios</h3>
-        <div class="content has-text-justified">
-          <p>
-            Two natural advantages of using LLMs for image layout generation: 
-            <br> (1) Attribute Binding: assign correct attributes to the bounding boxes 
-            <br> (2) Text-based inpainting: imagine and expand the underspecified description of certain objects.
-          </p>
-          <img src="./static/images/2d_application.jpg" alt="Teaser" width="100%">
-        </div>
 
       </div>
     </div>
-    <!--/ 2D. -->
 
-
-    <!-- 3D. -->
-<!--     <div class="columns is-centered">
+    <!-- Framework -->
+    <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">3D Scene Synthesis</h2>
+        <h2 class="title is-3">Framework</h2>
 
-        <h3 class="title is-4"></h3>
         <div class="content has-text-justified">
           <p>
-            LayoutGPT shows comparable performance as supervised methods in indoor scene generation conditioned on room type and floor plan size.
+            In Figure 2, we illustrate the overall architecture of the proposed layout-guided diffusion model, consisting of two modules:
+            <ol>
+              <li>
+                <b>Text-to-layout induction module</b> infers a coarse-grained layout via an LLM conditioned the given textual prompt.
+              </li>
+              <li>
+                <b>Layout-guided image generation module</b> synthesizes the final image based on the prompt and the generated layout, .
+              </li>
+            </ol>
           </p>
-          <img src="./static/images/3d_qualitative.png" alt="Teaser" width="100%">
+          <img class="columns is-centered has-text-centered" src="./static/images/framework.jpg" alt="Teaser" width="100%" style="margin:0 auto">
         </div>
         <br/>
-        
-        <h3 class="title is-4">Application: Scene Completion</h3>
-        <div class="content has-text-justified">
-          <p>
-            The autoregressive manner of LLMs enables LayoutGPT to complete a partial scene.
-          </p>
-          <img src="./static/images/3d_completion.png" alt="Teaser" width="100%">
-        </div>
 
       </div>
-    </div> -->
-    <!--/ 3D. -->
+    </div>
 
 
-    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Generated Images</h2>
+
+        <h3 class="title is-4">Examples: Spatial, Semantic</h3>
+        <div class="content has-text-justified">
+          <p>
+            Results on the <strong>Spatial</strong>, and <strong>Semantic</strong> inputs.
+            The ground-truth (GT) image, the ground-truth layout with the generated image (GT*), the layout generated from LayoutDM, and our results for each prompt are shown from left to right.
+          </p>
+          <img src="./static/images/case-4.jpg" alt="Teaser" width="100%">
+        </div>
+
+        <h3 class="title is-4">Examples: Numerical, Mixed, Null</h3>
+        <div class="content has-text-justified">
+          <p>
+            Results on the <strong>Numerical</strong>, <strong>Mixed</strong>, and <strong>Null</strong> inputs.
+          </p>
+          <img src="./static/images/case-3.jpg" alt="Teaser" width="100%">
+        </div>
+        <br/>
+
+
+
+      </div>
+    </div>
+
+
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
 
         <div class="content has-text-justified">
           <p>
-            Please check out previous work like <a href="https://gligen.github.io/">GLIGEN</a>, <a href="https://github.com/nv-tlabs/ATISS">ATISS</a>, 
-            and <a href="https://github.com/microsoft/GLIP">GLIP</a> upon which we build our LayoutLLM framework and code repository. 
-            There's also a lot of relevant work that was introduced around the same time as ours.
+            You may refer to previous works such as  <a href="https://gligen.github.io/">GLIGEN</a>, <a href="https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/text2img">Stable Diffusion</a>, and <a href="https://platform.openai.com/docs/models/gpt-3-5">GPT3.5</a>, which serve as foundational frameworks for our LayoutLLM-T2I framework and code repository.
           </p>
         </div>
       </div>
@@ -284,10 +302,10 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{feng2023layoutgpt,
-  title={LayoutGPT: Compositional Visual Planning and Generation with Large Language Models},
-  author={Feng, Weixi and Zhu, Wanrong and Fu, Tsu-jui and Jampani, Varun and Akula, Arjun and He, Xuehai and Basu, Sugato and Wang, Xin Eric and Wang, William Yang},
-  journal={arXiv preprint arXiv:2305.15393},
+    <pre><code>@article{qu2023layoutllm,
+  title={LayoutLLM-T2I: Eliciting Layout Guidance from LLM for Text-to-Image Generation},
+  author={Leigang Qu, Shengqiong Wu, Hao Fei, Liqiang Nie, Tat-Seng Chua},
+  journal={Proceedings of the {ACM} International Conference on Multimedia},
   year={2023}
 }
 </code></pre>

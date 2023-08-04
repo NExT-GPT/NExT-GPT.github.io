@@ -1,15 +1,15 @@
 # LayoutGPT
 
-This is the repository that contains source code for the [LayoutGPT project page](https://layoutgpt.github.io).
+This is the repository that contains source code for the [LayoutLLM-T2I project page](https://layoutllm-t2i.github.io/).
 
 The webpage code was borrowed from [Nerfies](https://github.com/nerfies/nerfies.github.io).
 
 If you find LayoutGPT useful for your work please cite:
 ```
-@article{feng2023layoutgpt,
-  title={LayoutGPT: Compositional Visual Planning and Generation with Large Language Models},
-  author={Feng, Weixi and Zhu, Wanrong and Fu, Tsu-jui and Jampani, Varun and Akula, Arjun and He, Xuehai and Basu, Sugato and Wang, Xin Eric and Wang, William Yang},
-  journal={arXiv preprint arXiv:2305.15393},
+@inproceedings{qu2023layoutllm,
+  title={LayoutLLM-T2I: Eliciting Layout Guidance from LLM for Text-to-Image Generation},
+  author={Leigang Qu, Shengqiong Wu, Hao Fei, Liqiang Nie, Tat-Seng Chua},
+  booktitle={Proceedings of the {ACM} International Conference on Multimedia},
   year={2023}
 }
 ```
