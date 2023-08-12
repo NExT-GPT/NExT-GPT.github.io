@@ -1,8 +1,8 @@
 # LayoutLLM-T2I
 
-This is the repository that contains source code for the [LayoutLLM-T2I project page](https://layoutllm-t2i.github.io/).
+This is the repository that contains the source code for the [LayoutLLM-T2I project page](https://layoutllm-t2i.github.io/).
 
-If you use this LayoutLLM-T2I in your work, please kindly cite:
+If you use LayoutLLM-T2I in your project, please kindly cite:
 ```
 @inproceedings{qu2023layoutllm,
   title={LayoutLLM-T2I: Eliciting Layout Guidance from LLM for Text-to-Image Generation},
