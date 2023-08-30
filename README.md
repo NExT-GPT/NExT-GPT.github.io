@@ -1,13 +1,15 @@
-# LayoutLLM-T2I
+# NExT-GPT
+## Any-to-Any Multimodal Large Language Model
 
-This is the repository that contains the source code for the [LayoutLLM-T2I project page](https://layoutllm-t2i.github.io/).
+This is the repository that contains the source code for the [NExT-GPT project page](https://next-gpt.github.io/).
 
-If you use LayoutLLM-T2I in your project, please kindly cite:
+If you use NExT-GPT in your project, please kindly cite:
 ```
-@inproceedings{qu2023layoutllm,
-  title={LayoutLLM-T2I: Eliciting Layout Guidance from LLM for Text-to-Image Generation},
-  author={Leigang Qu, Shengqiong Wu, Hao Fei, Liqiang Nie, Tat-Seng Chua},
-  booktitle={Proceedings of the {ACM} International Conference on Multimedia},
+@articles{wu2023nextgpt,
+  title={NExT-GPT: Any-to-Any Multimodal Large Language Model},
+  author={Shengqiong Wu, Hao Fei, Leigang Qu, Wei Ji, Meishan Zhang, Liqiang Nie, Min Zhang, Tat-Seng Chua},
+  journal = {CoRR},
+  volume = {abs/2303.09508},
   year={2023}
 }
 ```
