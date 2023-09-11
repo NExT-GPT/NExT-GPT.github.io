@@ -7,7 +7,7 @@ If you use NExT-GPT in your project, please kindly cite:
 ```
 @articles{wu2023nextgpt,
   title={NExT-GPT: Any-to-Any Multimodal Large Language Model},
-  author={Shengqiong Wu, Hao Fei, Leigang Qu, Wei Ji, Meishan Zhang, Liqiang Nie, Min Zhang, Tat-Seng Chua},
+  author={Shengqiong Wu, Hao Fei, Leigang Qu, Wei Ji, Tat-Seng Chua},
   journal = {CoRR},
   volume = {abs/2303.09508},
   year={2023}

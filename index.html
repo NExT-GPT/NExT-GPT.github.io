@@ -1,91 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="description"
-        content="NExT-GPT: Any-to-Any Multimodal Large Language Model">
-  <meta name="keywords" content="text-to-image generation, Large Language Models, scene synthesis">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>NExT-GPT</title>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="NExT-GPT: Any-to-Any Multimodal Large Language Model">
+    <meta name="keywords" content="text-to-image generation, Large Language Models, scene synthesis">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NExT-GPT</title>
 
-  <script>
-    window.dataLayer = window.dataLayer || [];
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-    gtag('js', new Date());
+        gtag('js', new Date());
 
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
+        gtag('config', 'G-PYVRSFMDRL');
+    </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
-  <link rel="icon" href="./static/images/logo.png">
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+    <link rel="icon" href="./static/images/logo.png">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
+    <link rel="stylesheet" href="./static/css/index-gradio.css">
+    <link rel="stylesheet" href="./static/css/live_theme.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
 </head>
 <body>
 
 
 <section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title" style="display: flex;flex-direction: row;align-items: center;justify-content: center;margin-bottom: 5px;"><img src="./static/images/logo.png" width="60" height="60" style="margin-right: 10px;">NExT-GPT:</h1>
-          <h1 class="title is-2 publication-title">Any-to-Any Multimodal Large Language Model</h1>
-          <div class="is-size-5 publication-authors">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title"
+                        style="display: flex;flex-direction: row;align-items: center;justify-content: center;margin-bottom: 5px;"><img
+                            src="./static/images/logo.png" width="60" height="60" style="margin-right: 10px;">NExT-GPT:</h1>
+                    <h1 class="title is-2 publication-title">Any-to-Any Multimodal Large Language Model</h1>
+                    <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://chocowu.github.io/">Shengqiong Wu</a>,</span>
-            <span class="author-block">
+                        <span class="author-block">
               <a href="https://haofei.vip/">Hao Fei</a><sup>*</sup>,
             </span>
-            <span class="author-block">
+                        <span class="author-block">
               <a href="#">Leigang Qu</a>,</span>
-            <span class="author-block">
+                        <span class="author-block">
               <a href="https://jiwei0523.github.io/">Wei Ji</a>,</span>
-            <span class="author-block">
+                        <span class="author-block">
               <a href="https://www.chuatatseng.com/">Tat-Seng Chua</a>
             </span>
-          </div>
-<!--           <div class="is-size-5 publication-authors"> -->
-<!--             <span class="author-block">
-              <a href="https://zhangmeishan.github.io/">Meishan Zhang</a><sup>2</sup>,
-            </span> -->
-<!--             <span class="author-block">
-              <a href="https://liqiangnie.github.io/">Liqiang Nie</a><sup>2</sup>,
-            </span> -->
-<!--             <span class="author-block">
-              <a href="https://zhangminsuda.github.io/">Min Zhang</a><sup>2</sup>,
-            </span> -->
-<!--           </div> -->
-          <div class="is-size-5 publication-authors" style="margin-top: 10px;">
-            <span class="author-block"><a href="https://www.nextcenter.org/">NExT++ Lab</a>, National University of Singapore</span>
-<!--             <br> -->
-<!--             <span class="author-block"><b style="color:#00A4EF; font-weight:normal">&#x25B6 </b>2. Harbin Institute of Technology (Shenzhen)</span> -->
-          </div>
+                    </div>
+                    <!--           <div class="is-size-5 publication-authors"> -->
+                    <!--             <span class="author-block">
+                                  <a href="https://zhangmeishan.github.io/">Meishan Zhang</a><sup>2</sup>,
+                                </span> -->
+                    <!--             <span class="author-block">
+                                  <a href="https://liqiangnie.github.io/">Liqiang Nie</a><sup>2</sup>,
+                                </span> -->
+                    <!--             <span class="author-block">
+                                  <a href="https://zhangminsuda.github.io/">Min Zhang</a><sup>2</sup>,
+                                </span> -->
+                    <!--           </div> -->
+                    <div class="is-size-5 publication-authors" style="margin-top: 10px;">
+                        <span class="author-block"><a href="https://www.nextcenter.org/">NExT++ Lab</a>, National University of Singapore</span>
+                        <!--             <br> -->
+                        <!--             <span class="author-block"><b style="color:#00A4EF; font-weight:normal">&#x25B6 </b>2. Harbin Institute of Technology (Shenzhen)</span> -->
+                    </div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block" style="font-size: 15px;">(<sup>*</sup>Correspondence)</span>
-          </div>
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block" style="font-size: 15px;">(<sup>*</sup>Correspondence)</span>
+                    </div>
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <!-- PDF Link. -->
+                            <span class="link-block">
                 <a href="https://arxiv.org/pdf/xxxx.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -95,29 +100,29 @@
                 </a>
               </span>
 
-              <span class="link-block">
+                            <span class="link-block">
                 <a href="https://huggingface.co/spaces/xxxx/NExT-GPT" target="_blank"
-                     class="external-link button is-normal is-rounded is-dark">
+                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fa fa-laugh"></i>
                   </span>
                   <span>Demo</span>
                 </a>
               </span>
-              
-              <!-- Video Link. -->
-              <!-- <span class="link-block">
-                <a href="https://www.youtube.com"
+
+                            <!-- Video Link. -->
+                            <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=aqw2SCWeWD0"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
                   <span>Video</span>
                 </a>
-              </span> -->
+              </span>
 
-              <!-- Code Link. -->
-              <span class="link-block">
+                            <!-- Code Link. -->
+                            <span class="link-block">
                 <a href="https://github.com/NExT-GPT/NExT-GPT"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -127,233 +132,1641 @@
                   </a>
               </span>
 
-              
-<!--               <span class="link-block">
-                <a href="https://github.com/LayoutLLM-T2I/LayoutLLM-T2I" target="_blank"
+
+                            <span class="link-block">
+                <a href="https://github.com/NExT-GPT/NExT-GPT" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fa fa-database"></i>
                   </span>
                   <span>Dataset</span>
                   </a>
-              </span> -->
-              
-      
-<!--               <span class="link-block">
-                <a href="https://github.com/LayoutLLM-T2I/LayoutLLM-T2I"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span> -->
+              </span>
 
-              
+
+                            <!--               <span class="link-block">
+                                            <a href="https://github.com/LayoutLLM-T2I/LayoutLLM-T2I"
+                                               class="external-link button is-normal is-rounded is-dark">
+                                              <span class="icon">
+                                                  <i class="ai ai-arxiv"></i>
+                                              </span>
+                                              <span>arXiv</span>
+                                            </a>
+                                          </span> -->
+
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
-
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-<!--    <div class="hero-body">-->
-<!--      <h2 class="subtitle has-text-centered">-->
-<!--        LayoutLLM for image layout generation based on text inputs. -->
-<!--      </h2>-->
-<!--      <video id="teaser" autoplay muted loop playsinline height="200%">-->
-<!--        <source src="./static/videos/merged_images.mp4"-->
-<!--                type="video/mp4">-->
-<!--      </video>-->
-<!--    </div>-->
-
-<!--     <div class="hero-body">
-      <h2 class="subtitle has-text-centered">
-        LayoutGPT for 3D indoor scene synthesis.
-      </h2>
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/merged_scenes.mp4"
-                type="video/mp4">
-      </video>
-      
-    </div> -->
-
-  </div>
-</section>
-
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            In the text-to-image generation field, recent remarkable progress in Stable Diffusion makes it possible to generate rich kinds of novel photorealistic images.
-            However, current models still face misalignment issues (<em>e.g.</em>, problematic spatial relation understanding and numeration failure) in complex natural scenes, which impedes the high-faithfulness text-to-image generation.
-            Although recent efforts have been made to improve controllability by giving fine-grained guidance (<em>e.g.</em>, sketch and scribbles), this issue has not been fundamentally tackled since users have to provide such guidance information manually.
-
-          </p>
-          <p>
-            In this work, we strive to synthesize high-fidelity images that are semantically aligned with a given textual prompt without any guidance.
-            Toward this end, we propose a coarse-to-fine paradigm to achieve layout planning and image generation.
-            Concretely, we first generate the coarse-grained layout conditioned on a given textual prompt via in-context learning based on Large Language Models.
-            Afterward, we propose a fine-grained object-interaction diffusion method to synthesize high-faithfulness images conditioned on the prompt and the automatically generated layout.
-            Extensive experiments demonstrate that our proposed method outperforms the state-of-the-art models in terms of cross-modal text-layout alignment and high-faithfulness image generation.
-          </p>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Paper video. -->
-  </div>
 </section>
 
 
 <section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Motivation</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            Despite the satisfactory performance achieved by recent SD-based models, synthesizing high-faithful images in complex scenes is still challenging, such as <font color="#4C76C6"><em>problematic spatial relation understanding</em></font> and <font color="#4C76C6"><em>numeration failure</em></font>, as shown in the following figure.
-           However, to achieve high-faithfulness image synthesis, the existing models suffer from the following challenges:
-
-            <ol>
-              <li>
-                <b>Layout Planning</b> requires abstract spatial imagination and analysis capabilities. The limited annotated layout data and intrinsic inductive bias make it difficult for existing diffusion methods to accurately and aesthetically generate layouts. Although notable efforts have been dedicated to synthesizing complex scenes by manually providing guidance information, these strategies suffer from weak flexibility and low efficiency since they heavily rely on extra labor-intensive guidance.
-              </li>
-              <li>
-                <b>Relation Modeling</b>, <em>e.g.</em>, the high-level spatial and semantic relations, plays a pivotal role in understanding, imagining, and depicting complex scenes for T2I models, but it is still under-explored owing to the complex and ever-changing environments in real life.
-              </li>
-            </ol>
-
-
-          </p>
-          <img class="columns is-centered has-text-centered" src="./static/images/intro.jpg" alt="Teaser" width="60%" style="margin:0 auto">
+    <div class="container is-max-desktop">
+        <!-- Paper video. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-full-width">
+                <h2 class="title is-2">Video Presentation</h2>
+                <div class="publication-video">
+                    <iframe src="https://www.youtube.com/embed/aqw2SCWeWD0?si=jIKgOkew2rmRROUy"
+                            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
-        <br/>
-
-      </div>
+        <!--/ Paper video. -->
     </div>
+</section>
 
-    <!-- Framework -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Framework</h2>
 
-        <div class="content has-text-justified">
-          <p>
-            In Figure 2, we illustrate the overall architecture of the proposed layout-guided diffusion model, consisting of two modules:
-            <ol>
-              <li>
-                <b>Text-to-layout induction module</b> infers a coarse-grained layout via an LLM conditioned the given textual prompt.
-              </li>
-              <li>
-                <b>Layout-guided image generation module</b> synthesizes the final image based on the prompt and the generated layout, .
-              </li>
-            </ol>
-          </p>
-          <img class="columns is-centered has-text-centered" src="./static/images/framework.png" alt="Teaser" width="100%" style="margin:0 auto">
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-2">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        While recently Multimodal Large Language Models (MM-LLMs) have made exciting strides, they mostly fall prey to the limitation
+                        of only input-side multimodal understanding, without the ability to produce content in multiple modalities.
+                        As we humans always perceive the world and communicate with people through various modalities, developing any-to-any MM-LLMs
+                        capable of accepting and delivering content in any modality becomes essential to human-level AI.
+                        To fill the gap, we present an end-to-end general-purpose any-to-any MM-LLM system, <b>NExT-GPT</b>.
+                        We connect an LLM with multimodal adaptors and different diffusion decoders, enabling NExT-GPT to perceive inputs and generate
+                        outputs in arbitrary combinations of text, images, videos, and audio.
+                        By leveraging the existing well-trained highly-performing encoders and decoders, NExT-GPT is tuned with only a small amount of
+                        parameter (1%) of certain projection layers, which not only benefits low-cost training and also facilitates convenient
+                        expansion to more potential modalities.
+                        Moreover, we introduce a modality-switching instruction tuning (MosIT) and manually curate a high-quality dataset for MosIT,
+                        based on which NExT-GPT is empowered with complex cross-modal semantic understanding and content generation.
+                        Overall, our research showcases the promising possibility of building an AI agent capable of modeling universal modalities,
+                        paving the way for more human-like AI research in the community.
+                    </p>
+                </div>
+            </div>
         </div>
-        <br/>
+        <!--/ Abstract. -->
 
-      </div>
+        <br>
     </div>
+</section>
 
 
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Generated Images</h2>
+<section class="section">
+    <div class="container is-max-desktop">
 
-        <h3 class="title is-4">Examples: Spatial, Semantic</h3>
-        <div class="content has-text-justified">
-          <p>
-            Results on the <strong>Spatial</strong>, and <strong>Semantic</strong> inputs.
-            The ground-truth (GT) image, the ground-truth layout with the generated image (GT*), the layout generated from LayoutDM, and our results for each prompt are shown from left to right.
-          </p>
-          <img src="./static/images/case-4.jpg" alt="Teaser" width="100%">
+        <div class="columns is-centered has-text-centered">
+            <h2 class="title is-2">Technical Description</h2>
+            <br>
         </div>
 
-        <h3 class="title is-4">Examples: Numerical, Mixed, Null</h3>
-        <div class="content has-text-justified">
-          <p>
-            Results on the <strong>Numerical</strong>, <strong>Mixed</strong>, and <strong>Null</strong> inputs.
-          </p>
-          <img src="./static/images/case-3.jpg" alt="Teaser" width="100%">
+        <!-- Architecture -->
+        <div class="columns is-centered">
+            <div class="column is-full-width">
+                <h4 class="title is-3">• Architecture</h4>
+
+                <div class="content has-text-justified">
+                    <img class="columns is-centered has-text-centered" src="./static/images/framework.png" alt="Teaser" width="95%"
+                         style="margin:0 auto">
+                    <br>
+                    <figcaption>
+                        <p style="text-align: center;">
+                            <font color="061E61">
+                                <b>Figure 1:</b> By connecting LLM with multimodal adaptors and diffusion decoders, NExT-GPT achieves universal
+                                multimodal understanding and any-to-any modality input and output.
+                            </font>
+                        </p>
+                    </figcaption>
+                    <br>
+                    <p>
+                    <ul>
+                        <li>
+                            <b>Multimodal Encoding Stage.</b> Leveraging existing well-established models to encode inputs of various modalities.
+                            Here we take advantage of the ImageBind, which is a unified high-performance encoder across six modalities.
+                            Then, via the linear projection layer, different input representations are mapped into language-like representations that
+                            are comprehensible to the LLM.
+                        </li>
+                        <li>
+                            <b>LLM Understanding and Reasoning Stage.</b>
+                            An LLM is used as the core agent of NExT-GPT.
+                            Technically, we employ the Vicuna.
+                            LLM takes as input the representations from different modalities and carries out semantic understanding and reasoning over
+                            the inputs.
+                            It outputs 1) the textual responses directly, and 2) signal tokens of each modality that serve as instructions to dictate
+                            the decoding layers whether to generate multimodal contents, and what content to produce if yes.
+                        </li>
+                        <li>
+                            <b>Multimodal Generation Stage.</b>
+                            Receiving the multimodal signals with specific instructions from LLM (if any), the Transformer-based output projection
+                            layers map the signal token representations into the ones that are understandable to following multimodal decoders.
+                            Technically, we employ the current off-the-shelf latent conditioned diffusion models of different modal generations, i.e.,
+                            Stable Diffusion (SD) for image synthesis, Zeroscope for video synthesis, and AudioLDM for audio synthesis.
+                        </li>
+                    </ul>
+                    </p>
+                    <br>
+
+                    <img class="columns is-centered has-text-centered" src="./static/images/config.png" alt="Teaser" width="85%"
+                         style="margin:0 auto">
+                </div>
+                <br/>
+
+            </div>
         </div>
-        <br/>
+
+        <!-- Inference -->
+        <div class="columns is-centered">
+            <div class="column is-full-width">
+                <h2 class="title is-3">• System Inference</h2>
+
+                <div class="content has-text-justified">
+                    <p>
+                        In Figure 2 we further illustrate the inference procedure of NExT-GPT.
+                        Given certain user inputs of any combination of modalities, the corresponding modal encoders and projectors transform them
+                        into feature representations and passed to LLM (except the text inputs, which will be directly fed into LLM).
+                        Then, LLM decides what content to generate, i.e., textual tokens, and modality signal tokens.
+                        If LLM identifies a certain modality content (except language) to be produced, a special type of token will be output
+                        indicating the activation of that modality; otherwise, no special token output means deactivation of that modality.
+                        Technically, we design the '&lt;IMG<sub>i</sub>&gt;' (i=0,...,4) as image signal tokens;
+                        '&lt;AUD<sub>i</sub>&gt;' (i=0,...,8) as audio signal tokens; and
+                        '&lt;VID<sub>i</sub>&gt;' (i=0,...,24) as video signal tokens.
+                        After LLM, the text responses are output to the user; while the representations of the signal tokens of certain activated
+                        modalities are passed to the corresponding diffusion decoders for content generation.
+                    </p>
+                    <br>
+                    <img class="columns is-centered has-text-centered" src="./static/images/inference.png" alt="Teaser" width="100%"
+                         style="margin:0 auto">
+                    <br>
+                    <figcaption>
+                        <p style="text-align: center;">
+                            <font color="061E61">
+                                <b>Figure 2:</b> NExT-GPT inference process. Grey colors denote the deactivation of the modules.
+                            </font>
+                        </p>
+                    </figcaption>
+                </div>
+                <br/>
+
+            </div>
+        </div>
+
+        <!-- Alignment -->
+        <div class="columns is-centered">
+            <div class="column is-full-width">
+                <h2 class="title is-3">• Lightweight Multimodal Alignment Learning</h2>
+
+                <div class="content has-text-justified">
+                    <p>
+                        We design the system with mainly three tiers in loose coupling, and we only need to update the two projection layers at
+                        encoding side and decoding side.
+                    <ul>
+                        <li>
+                            <b>Encoding-side LLM-centric Multimodal Alignment.</b>
+                            We align different inputting multimodal features with the text feature space, the representations that are understandable
+                            to the core LLM.
+                        </li>
+                        <li>
+                            <b>Decoding-side Instruction-following Alignment.</b>
+                            We minimize the distance between the LLM's modal signal token representations (after each Transformer-based project layer)
+                            and the conditional text representations of the diffusion models.
+                            Since only the textual condition encoders are used (with the diffusion backbone frozen), the learning is merely based on
+                            the purely captioning texts, i.e., without any visual or audio inputs.
+                        </li>
+                    </ul>
+                    </p>
+                    <img class="columns is-centered has-text-centered" src="./static/images/alignment.png" alt="Teaser" width="100%"
+                         style="margin:0 auto">
+                    <br>
+                    <figcaption>
+                        <p style="text-align: center;">
+                            <font color="061E61">
+                                <b>Figure 3:</b> Illustration of the lightweight multimodal alignment learning of encoding and decoding.
+                            </font>
+                        </p>
+                    </figcaption>
+                </div>
+                <br/>
+
+            </div>
+        </div>
 
 
+        <!-- Instruction -->
+        <div class="columns is-centered">
+            <div class="column is-full-width">
+                <h2 class="title is-3">• Modality-switching Instruction Tuning (MosIT)</h2>
 
-      </div>
+                <div class="content has-text-justified">
+                    <p>
+                        Further instruction tuning (IT) is necessary to enhance the capabilities and controllability of LLM.
+                        To facilitate the development of any-to-any MM-LLM, we propose a novel Modality-switching Instruction Tuning (<b>MosIT</b>).
+                        As illustrated in Figure 4, when an IT dialogue sample is fed into the system, the LLM reconstructs and generates the textual
+                        content of input (and represents the multimodal content with the multimodal signal tokens).
+                        The optimization is imposed based on gold annotations and LLM's outputs.
+                        In addition to the LLM tuning, we also fine-tune the decoding end of NExT-GPT.
+                        We align the modal signal token representation encoded by the output projection with the gold multimodal caption
+                        representation encoded by the diffusion condition encoder.
+                        Thereby, the comprehensive tuning process brings closer to the goal of faithful and effective interaction with users.
+                    </p>
+                    <br>
+                    <img class="columns is-centered has-text-centered" src="./static/images/instruction_tuning.png" alt="Teaser" width="100%"
+                         style="margin:0 auto">
+                    <br>
+                    <figcaption>
+                        <p style="text-align: center;">
+                            <font color="061E61">
+                                <b>Figure 4:</b> Illustration of modality-switching instruction tuning.
+
+                            </font>
+                        </p>
+                    </figcaption>
+                </div>
+                <br/>
+
+                <h4 class="title is-4">MosIT Data</h4>
+                <p>
+                    All the existing IT datasets fail to meet the requirements for our any-to-any MM-LLM scenario.
+                    We thus construct the <b>MosIT</b> dataset of high quality.
+                    The data encompasses a wide range of multimodal inputs and outputs, offering the necessary complexity and variability to
+                    facilitate the training of MM-LLMs that can handle diverse user interactions and deliver desired responses accurately.
+                </p>
+                <img class="columns is-centered has-text-centered" src="./static/images/MosIT.png" alt="Teaser" width="100%" style="margin:0 auto">
+
+            </div>
+        </div>
+
     </div>
+</section>
 
 
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
+<section class="section">
+    <div class="container is-max-desktop">
 
-        <div class="content has-text-justified">
-          <p>
-            You may refer to previous works such as  <a href="https://gligen.github.io/">GLIGEN</a>, <a href="https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/text2img">Stable Diffusion</a>, and <a href="https://platform.openai.com/docs/models/gpt-3-5">GPT3.5</a>, which serve as foundational frameworks for our LayoutLLM-T2I framework and code repository.
-          </p>
+        <div class="columns is-centered has-text-centered">
+            <h2 class="title is-2">Demonstrations</h2>
+            <br>
         </div>
-      </div>
-    </div>
 
-  </div>
+        <div class="columns is-centered">
+            <div class="column is-full-width">
+                <!--        <h2 class="title is-3">Generated Images</h2>-->
+
+
+                <br/>
+                <!--            Example-1-->
+                <h3 class="title is-4">• Example-1: Text → Text+Image+Audio</h3>
+                <div class="content has-text-justified">
+
+                    <div class="wrapper svelte-nab2ao"
+                         style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: #f66c0f;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
+
+                        <div class="message-wrap svelte-1uvwjgr">
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>I've recently started practicing mindfulness and meditation as part of my daily routine, but sometimes it's challenging.
+                                            Can you help me with some techniques?</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Of course! Mindfulness and meditation can be a wonderful way to cultivate a sense of calm and focus.
+                                          One technique you might find helpful is called "mindful breathing."
+                                          It involves taking slow, deep breaths and focusing your attention on the sensation of the breath entering and leaving your body.
+                                          Another technique is "body scan meditation," where you consciously scan your entire body from head to toe, paying attention to any sensations or discomfort.
+                                          You can also try guided meditations that provide a structured practice.
+                                          Would you like me to find a video that demonstrates mindful breathing or body scan meditation?</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user"></div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>I wish to listen to a music for the meditation first.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>I guess you may want some musics that sound soft.</p>
+                                        <p><audio playsinline="" controls="">
+                                          <source type="audio/wav" src="./static/images/demo1/qplfj20g.wav"></audio>
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot"><p>Base on the audio content, visualize it in an image.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo1/3x8lhkc4.jpg">
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Can you infer what time is in the picture?</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Based on the image, it is likely that the time is either early morning or late afternoon.
+                                          The sunlight is either low or setting, creating a serene atmosphere.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!--          End  Example-1-->
+
+
+                <br/>
+                <!--            Example-2-->
+                <h3 class="title is-4">• Example-2: Text+Image → Text+Image+Video</h3>
+                <div class="content has-text-justified">
+
+                    <div class="wrapper svelte-nab2ao"
+                         style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: #f66c0f;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
+
+                        <div class="message-wrap svelte-1uvwjgr">
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Show me another image in similar contents.
+                                        <br/><br/>
+                                        <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo2/s8fj4t4g.png" >
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>
+                                        <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo2/wpx3ziw1.jpg">
+                                      </p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user"></div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Is there any suitable place to see this scene?</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Yes, there is a suitable place to see this scene.
+                                            You can see the beautiful pink cherry blossoms in full bloom on a tree next to a river.
+                                            The image is taken from a distance, allowing you to appreciate the vibrant colors and the serene atmosphere.
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot"><p>Use a sound to describe the beautiful scene.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Sure!</p>
+                                        <audio playsinline="" controls=""><source type="audio/wav" src="./static/images/demo2/ntzx1pe_.wav"></audio>
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>It would be great to see a video that show the stunning scene.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Certainly! Here is the video scene.</p>
+                                        <video src="./static/images/demo2/j3uw7df1.mp4" style="display: inline-block;" width="500" playsinline="" controls=""></video>
+                                    </span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!--          End  Example-2-->
+
+
+                <br/>
+                <!--            Example-3-->
+                <h3 class="title is-4">• Example-3: Text+Video → Text+Image</h3>
+                <div class="content has-text-justified">
+
+                    <div class="wrapper svelte-nab2ao"
+                         style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: #f66c0f;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
+
+                        <div class="message-wrap svelte-1uvwjgr" style="width: 100%;">
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Is the guy in the video iron man?
+                                        <br/><br/>
+                                        <video src="./static/images/demo3/sf9asd3.mp4" style="display: inline-block;" width="500" playsinline="" controls=""></video>
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Yes, the guy in the video is iron man.
+                                      </p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user"></div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Could you show me a comic-style picture of iron man?</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Certainly! Here is a comic-style picture of Iron Man: <br/><br/>
+                                        <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo3/42taa5y_.jpg">
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot"><p>I need a more abstract one.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Sure, here's an abstract image oflron Man:</p>
+                                        <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo3/390hnpkm.jpg">
+                                    </span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!--          End  Example-3-->
+
+
+                <br/>
+                <!--            Example-4-->
+                <h3 class="title is-4">• Example-4: Text+Video → Text+Audio</h3>
+                <div class="content has-text-justified">
+
+                    <div class="wrapper svelte-nab2ao"
+                         style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: #f66c0f;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
+
+                        <div class="message-wrap svelte-1uvwjgr">
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>What is the man doing in the video?
+                                        <br/><br/>
+                                        <video src="./static/images/demo4/birthday.mp4" style="display: inline-block;" width="500" playsinline="" controls=""></video>
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>
+                                        The man in the video is celebrating his birthday by lighting a candle on a cake and making a wish.
+                                      </p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user"></div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>What is the man wearing?</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>The man is wearing a white shirt.
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot"><p>How about synthesizing a song to celebrate his birthday please?</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>It would be a great idea to synthesize a song to celebrate the man's birthday. Here's a sample of a song that could be used:
+                                            <br/>
+                                            <ul>
+                                                <li>
+                                                    Verse 1: Happy birthday, dear friend, You're shining bright, With a smile so wide. You're the light in our lives
+                                                </li>
+                                                <li>
+                                                    Chorus: Celebrate, celebrate, With laughter and joy, With love and happiness, Bringing happiness to those around
+                                                </li>
+                                                <li>
+                                            Verse 2: You're the one who brings us together, With your warmth and your grace, You're the one who makes us feel, A part of this special place.
+                                                </li>
+                                                <li>
+                                            Chorus: Celebrate, celebrate, With laughter and joy, With love and happiness, Bringing happiness to those around
+                                                </li>
+                                                <li>
+                                            Bridge: So let's raise a glass, To a life filled with love and grace. With laughter and joy, May your birthday be filled with peace
+                                                </li>
+                                                <li>
+                                            Chorus: Celebr
+                                                </li>
+                                            </ul>
+                                        </p>
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>I guess you made me wrong. I mean, show the song in an audio.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Sorry for the mistake! Here's an audio of the song:</p>
+                                        <audio playsinline="" controls=""><source type="audio/wav" src="./static/images/demo4/7fcxy3yi.wav"></audio>
+                                    </span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!--          End  Example-4-->
+
+
+
+                <br/>
+                <!--            Example-5-->
+                <h3 class="title is-4">• Example-5: Text+Audio → Text+Image+Video</h3>
+                <div class="content has-text-justified">
+
+                    <div class="wrapper svelte-nab2ao"
+                         style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: #f66c0f;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
+
+                        <div class="message-wrap svelte-1uvwjgr">
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Describe what can be heard from the sound:</p>
+                                            <audio playsinline="" controls=""> <source type="audio/wav" src="./static/images/demo5/jsda8mk3.wav"></audio>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>The sound of a growling lion is a deep, rumbling noise that starts low in the chest and gradually builds in intensity.
+                                          It is often associated with a sense of power and strength, as well as a sense of danger or warning.
+                                          The growl of a lion can be heard from a distance and is often used by the animal to communicate with other members of its pride.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user"></div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Displaying an image to help visualize it would be fantastic.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Sure, here is an image of a lion growling:
+                                        </p><br>
+                                      <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo5/mg523p_t.jpg">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot"><p>That looks great! How about showing a video that explains how the lions catch its prey?</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <video src="./static/images/demo5/cwrt5vco.mp4" style="display: inline-block;" width="500" playsinline="" controls=""></video>
+                                    </span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!--          End  Example-5 -->
+
+
+
+
+                <br/>
+                <!--            Example-6 -->
+                <h3 class="title is-4">• Example-6: Text → Text+Image+Video+Audio</h3>
+                <div class="content has-text-justified">
+
+                    <div class="wrapper svelte-nab2ao"
+                         style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: #f66c0f;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
+
+                        <div class="message-wrap svelte-1uvwjgr">
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>I've recently taken up painting as a hobby, and I'm looking for some inspiration. Can you help me find some interesting ideas?</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Of course! Painting is a wonderful creative outlet.
+                                          What kind of subjects are you interested in exploring? Landscapes, portraits, abstract art, or something else?</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user"></div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Abstract art</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Abstract art sounds great. lt allows you to express your emotions and ideas without any specific subject matter.
+                                            You can experiment with different techniques like brushstrokes, color mixing, and layeringHere's an image of an abstract painting that might inspire you:
+                                        </p><br>
+                                      <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo6/lkjw574_.jpg">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot"><p>And also water painting. maybe l could start by watching some teaching videos.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>That's good idea, please check the tutorial video:</p>
+                                        <video src="./static/images/demo6/ks2oqs8s.mp4" style="display: inline-block;" width="500" playsinline="" controls=""></video>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Fantastic! Can you describe the video?</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Of course! Tha video is a tutorial on watercolor painting.
+                                          lt covers the basics ot mixing colors, creating textures and layering techniques.
+                                          The instructor demonstrates different brushstrokes and techniques to achieve various effects.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot"><p>That's good. So i want to see some water paining pictures.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Here are some watercolor paintings:</p>
+                                      <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo6/7vunkizm.jpg">
+                                      <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo6/s6atq2su.jpg">
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot"><p>That's so amazing painting.l wish I could do that.
+                                        Can you show me some tips about water painting?
+                                    </p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Sure, here are a few tips for water painting:
+                                      </p>
+                                      <p>
+                                          1. Use a wet brush to create soft, blended strokes.<br/>
+                                          2. Experiment with different watercolor techniques such as wet-on-wet, wet-on-dry, and wet-of-wet.<br/>
+                                          3.ay attention to the transparency of the watercolor and use thin layers to create depth.<br/>
+                                          4. Use a variety of brushes with different shapes and sizes to achieve different effects.<br/>
+                                          5. Explore the use of negative space to create a sense of depth and dimension.<br/>
+                                          6. Don't be afraid to make mistakes and embrace the unpredictability of watercolor.
+                                      </p>
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot"><p>If l were painting, l am used to play some musics.
+                                        I think that is helpful for my creation.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Totally agreed! Music helps a lot for art creation, especially some inspiring music:
+                                      </p>
+                                            <audio playsinline="" controls=""> <source type="audio/wav" src="./static/images/demo6/ftx_2y76.wav"></audio>
+                                    </span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!--          End  Example-6-->
+
+
+
+
+                <br/>
+                <!--            Example-7 -->
+                <h3 class="title is-4">• Example-7: Text → Text+Image</h3>
+                <div class="content has-text-justified">
+
+                    <div class="wrapper svelte-nab2ao"
+                         style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: #f66c0f;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
+
+                        <div class="message-wrap svelte-1uvwjgr">
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>I want a tattoo of a sunflower on my arm, but l am not sure what style would look best on me.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>A sunflower tattoo can be done in various styles, such as realistic, abstract, or even minimalist.
+                                          lt all depends on your personal taste and the design you want to go with.
+                                          You can also consider the color scheme and placement of the tattoo to make it look more natural and harmonious with your body.
+                                          Would you like me to provide you with some examples of sunflower tattoo designs?</p>
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot"><p>Yes please!</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Here are a few examples of sunflower tattoo designs: </p>
+                                      <p>
+                                          1. A realistic sunflower tattoo with vibrant petals and leaves, surrounded by a detailed background.<br/>
+                                          2. An abstract sunflower tattoo, with a minimalist design that focuses on the shape and color of the flower.<br/>
+                                          3. A simple sunflower tattoo with a single sunflower petal, representing the beauty and simplicity of the flower.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Good tips, can you show me the picture the design?</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Sure, here are the images of the sunflower tattoo designs: 1. 2. 3.</p>
+                                      <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo7/dz_37klb.jpg">
+                                      <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo7/gnpa9c3b.jpg">
+                                      <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo7/12vya5uv.jpg">
+                                    </span>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <!--          End  Example-7-->
+
+
+
+
+
+                <br/>
+                <!--            Example-8-->
+                <h3 class="title is-4">• Example-8: Text+Video → Text+Image+Audio</h3>
+                <div class="content has-text-justified">
+
+                    <div class="wrapper svelte-nab2ao"
+                         style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: #f66c0f;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
+
+                        <div class="message-wrap svelte-1uvwjgr">
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>What is the unusual part of this video?</p>
+                                        <video src="./static/images/demo8/5as1fenc.mp4" style="display: inline-block;" width="250" playsinline="" controls=""></video>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>The unusual part of this video is that a dog is riding a skateboard.while a person is riding a bicycle.
+                                          It is not common to see a dog on a skateboard, as dogs are typically not able to ride skateboards or bicycles.
+                                          This scene is unique and interesting because it showcases a dog's ability to adapt and participate in human-made activities, demonstrating its intelligence and adaptability.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user"></div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>That is pretty cool. How about to add some music to make this scene look more funny?</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Certainly! Here's a synthesized music track that could enhance the humor and lightheartedness of the scene:
+                                        </p><br>
+                                            <audio playsinline="" controls=""> <source type="audio/wav" src="./static/images/demo8/4we9728e.wav"></audio>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Do you have any other similar unusual scenes? Show them.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>I have a list of such kind of scenes:</p>
+                                      <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo8/0r4db98m.jpg">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>I had an idea for one scene - what if a pig is flying in the sky?</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>It is not a common sight to see a pig or any other animal, let alone a pig, flying in the air.
+                                            This scene is likely meant to be humorous or whimsical, as it is an unconventional and lighthearted depiction of a pig enjoying its time in the sky.</p>
+                                      <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo8/96_rd2jx.jpg">
+                                    </span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!--          End  Example-8 -->
+
+
+
+
+                <br/>
+                <!--            Example-9 -->
+                <h3 class="title is-4">• Example-9: Text → Text+Image+Video+Audio</h3>
+                <div class="content has-text-justified">
+
+                    <div class="wrapper svelte-nab2ao"
+                         style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: #f66c0f;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
+
+                        <div class="message-wrap svelte-1uvwjgr">
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>I'm planning a trip to New Orleans, and l'd love some recommendations for fun things to do and places to visit.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>New Orleans is a vibrant city with a rich history and culture.
+                                          Some popular attractions include the French Quarter, the National WWiMuseum, and the St. Louis Cathedral.
+                                          You can also explore the historic Garden District and visit the iconic Bourbon Street for some night life.
+                                          Additionally, don't miss the opportunity to try some delicious Cajun cuisine!</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user"></div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>What kind of cajun cuisine? can you show me some pictures?</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Certainly! Cajun cuisine is known for its hearty and flavorful dishes.
+                                          Here are some pictures to give you a taste of what you can expect:</p><br>
+                                      <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo9/ai81fvj1.jpg">
+                                      <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo9/x_7gkknj.jpg">
+                                      <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo9/ypeznaq6.jpg">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>I've heard that New Orleans is famous for jazz music. Show me a piece of jazz music please.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>You are right. Here is a jazz music:</p>
+                                            <audio playsinline="" controls=""> <source type="audio/wav" src="./static/images/demo9/ygb8yqsn.wav"></audio>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Fantastic! I often see videos in which a bunch of people dance to jazz music, can you show me some?</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Of course!</p>
+                                        <video src="./static/images/demo9/r37zpq_g.mp4" style="display: inline-block;" width="500" playsinline="" controls=""></video>
+                                    </span>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <!--          End  Example-9-->
+
+
+
+
+                <br/>
+                <!--            Example-10 -->
+                <h3 class="title is-4">• Example-10: Text → Text+Image</h3>
+                <div class="content has-text-justified">
+
+                    <div class="wrapper svelte-nab2ao"
+                         style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: #f66c0f;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
+
+                        <div class="message-wrap svelte-1uvwjgr">
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Now I want to start a pet shop, but I need a logo for my shop. Do you have any ideas?</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Certainly! I can help you create a logo for your pet shop. To do this I would need to know more about the specific theme or style you'd like to have for your pet shop.
+                                          Factors such as color scheme, animal types, and overall atmosphere could play a role in designing the logo.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot"><p>It is a turtle pet shop, so the logo could be a turtle.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>I see, then, how about a logo like this?</p>
+                                      <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo10/ys4pyj6q.jpg">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>It's cute, but I'm aiming for a logo that's more distinctive and has a cool style.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Understand. How about this one?</p>
+                                      <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo10/4xs96__i.jpg">
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>It's nice. Can you explain this logo? and why is it designed like this?</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>The use of a green turtle, which is a distinctive and easily recognizable symbol,
+                                          adds a sense of uniqueness and character to the logo.
+                                          Additionally, the circular shape of the logo gives it a modern and clean appearance,
+                                          making it stand out from other pet shop logosThe combination of these elements gives the logo a cool style that is likely intended to appeal to potential customers and convey a sense of fun, creativity, and innovation.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <!--          End  Example-10 -->
+
+
+
+
+
+                <br/>
+                <!--            Example-11 -->
+                <h3 class="title is-4">• Example-11: Text+Image → Text+Image</h3>
+                <div class="content has-text-justified">
+
+                    <div class="wrapper svelte-nab2ao"
+                         style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: #f66c0f;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
+
+                        <div class="message-wrap svelte-1uvwjgr">
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>Where is the sculpture located?</p>
+                                      <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo12/s5d41fe.jpg">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>It is the Statue of Liberty. The sculpture is located on the grounds of the Liberty Island in New York City.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot"><p>Can you show me a closer look for the sculpture.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Certainly!</p>
+                                      <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo12/8qdgx81d.jpg">
+                                    </span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!--          End  Example-11 -->
+
+
+
+                <br/>
+                <!--            Example-12 -->
+                <h3 class="title is-4">• Example-12: Text+Image → Text+Audio</h3>
+                <div class="content has-text-justified">
+
+                    <div class="wrapper svelte-nab2ao"
+                         style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: #f66c0f;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
+
+                        <div class="message-wrap svelte-1uvwjgr" style="width: 100%;">
+                        <div class="message-wrap svelte-1uvwjgr" style="width: 100%;">
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                        <p>How many cars are in this picture?</p>
+                                      <img style="display: inline-block;width: 250px;max-height: 400px;" src="./static/images/demo11/8x8m23g.png">
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>There are two cars shown in this picture.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user"></div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Tell me what kind of car are they?</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>The two cars in the picture are SUVs.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row user-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/user.png" alt="avatar-user">
+                                </div>
+                                <div data-testid="user" class="message user svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Can you show me the sound of starting the engines of them.</p>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="message-row bot-row svelte-1uvwjgr">
+                                <div class="avatar-container svelte-1uvwjgr">
+                                    <img class="avatar-image svelte-1uvwjgr" src="./static/images/bot.png" alt="avatar-bot"></div>
+                                <div data-testid="bot" class="message bot svelte-1uvwjgr latest" dir="ltr" style="border-style: solid;">
+                                    <span class="md svelte-9tftx4 chatbot">
+                                      <p>Sure, here's the sound of the engine of the SUV:</p>
+                                          <audio playsinline="" controls=""> <source type="audio/wav" src="./static/images/demo11/647xrdim.wav"></audio>
+                                    </span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!--          End  Example-12-->
+
+
+
+
+
+                <br/>
+
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+
+        <!--    <div class="columns is-centered has-text-centered">-->
+        <!--        <h2 class="title is-2">Demonstrations</h2>-->
+        <!--      <br>-->
+        <!--    </div>-->
+
+        <div class="columns is-centered">
+            <div class="column is-full-width">
+                <h2 class="title is-3">Related Links</h2>
+
+                <div class="content has-text-justified">
+                    <p>
+                        You may refer to related work that serves as foundational frameworks for our framework and code repository,
+                        such as <a href="https://github.com/lm-sys/FastChat">Vicuna</a>,
+                        <a href="https://github.com/facebookresearch/ImageBind">ImageBind</a>,
+                        <a href="https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/text2img">Stable Diffusion</a>.
+                        <a href="https://github.com/haoheliu/AudioLDM">AudioLDM</a>.
+                        and <a href="https://huggingface.co/cerspense/zeroscope_v2_576w">Zeroscope</a>.
+                        We also partially draw inspirations from <a href="https://codi-gen.github.io/">CoDi</a>,
+                        <a href="https://github.com/DAMO-NLP-SG/Video-LLaMA">Video-LLaMA</a>,
+                        and <a href="https://github.com/Vision-CAIR/MiniGPT-4">MiniGPT-4</a>.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </section>
 
 
 <section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@articles{wu2023nextgpt,
+    <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@articles{wu2023nextgpt,
   title={NExT-GPT: Any-to-Any Multimodal Large Language Model},
-  author={Shengqiong Wu, Hao Fei, Leigang Qu, Wei Ji, Meishan Zhang, Liqiang Nie, Min Zhang, Tat-Seng Chua},
+  author={Shengqiong Wu, Hao Fei, Leigang Qu, Wei Ji, Tat-Seng Chua},
   journal = {CoRR},
   volume = {abs/2303.09508},
   year={2023}
 }
 </code></pre>
-  </div>
+    </div>
 </section>
 
 
 <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p style="text-align: center;">
-            The webpage is built based on <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
-          </p>
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p style="text-align: center;">
+                        The webpage is built based on <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </footer>
 
 </body>
