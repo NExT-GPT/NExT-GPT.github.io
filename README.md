@@ -6,10 +6,10 @@ This is the repository that contains the source code for the [NExT-GPT project p
 If you use NExT-GPT in your project, please kindly cite:
 ```
 @articles{wu2023nextgpt,
-  title={NExT-GPT: Any-to-Any Multimodal Large Language Model},
+  title={NExT-GPT: Any-to-Any Multimodal LLM},
   author={Shengqiong Wu, Hao Fei, Leigang Qu, Wei Ji, Tat-Seng Chua},
   journal = {CoRR},
-  volume = {abs/2303.09508},
+  volume = {abs/2309.05519},
   year={2023}
 }
 ```
