@@ -5,12 +5,12 @@ This is the repository that contains the source code for the [NExT-GPT project p
 
 If you use NExT-GPT in your project, please kindly cite:
 ```
-@articles{wu2023nextgpt,
-  title={NExT-GPT: Any-to-Any Multimodal LLM},
-  author={Shengqiong Wu, Hao Fei, Leigang Qu, Wei Ji, Tat-Seng Chua},
-  journal = {CoRR},
-  volume = {abs/2309.05519},
-  year={2023}
+@inproceedings{wu24next,
+  title={{NE}x{T}-{GPT}: Any-to-Any Multimodal {LLM}},
+  author={Wu, Shengqiong and Fei, Hao and Qu, Leigang and Ji, Wei and Chua, Tat-Seng},
+  booktitle={Proceedings of the International Conference on Machine Learning},
+  pages = {53366--53397},
+  year={2024}
 }
 ```
 
